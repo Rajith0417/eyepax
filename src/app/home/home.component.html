@@ -1,0 +1,18 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a href="" class="navbar-brand">Eyepax</a>
+      <div class="collapse navbar-collapse" id="">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/todo">ToDo</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="!userLoggedIn" class="nav-link" routerLink="/login">Login</a>
+            <a *ngIf="userLoggedIn" class="nav-link" routerLink="/login/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

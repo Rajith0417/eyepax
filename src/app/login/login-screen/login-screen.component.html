@@ -1,0 +1,30 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-10 mx-auto">
+        <form [formGroup]="formValue">
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="userName">User Name</label>
+            <input formControlName="userName" type="text" id="userName" class="form-control" placeholder="admin" required/>
+            <div *ngIf="showUserError" class="invalid-feedback d-block ">
+              Invalid UserName.
+            </div>
+          </div>
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="password">Password</label>
+            <input formControlName="password" type="password" id="password" class="form-control" placeholder="admin" required/>
+            <div *ngIf="showPaswdEerror" class="invalid-feedback d-block">
+              Invalid Password.
+            </div>
+          </div>
+          <!-- Submit button -->
+          <button (click)="submitCredentials()" type="button" class="btn btn-primary btn-block mb-4">Login</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
